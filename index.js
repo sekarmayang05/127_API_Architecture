@@ -8,6 +8,8 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/api', require('./routes/api'));
+
 
 async function startServer() {
     await connectDatabase();
